@@ -1,0 +1,96 @@
+### CREATE five documents.
+POST http://localhost:3000/finances HTTP/1.1
+content-type: application/json
+
+{
+    "location": "Food Lion",
+    "category": "grocery",
+    "amount": 20,
+    "date": "06-19-2023"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/finances HTTP/1.1
+content-type: application/json
+
+{
+    "location": "Blue Ridge Tire",
+    "category": "Auto",
+    "amount": 42.50,
+    "date": "11-30-2023"
+    
+}
+
+### CREATE 3
+POST http://localhost:3000/finances HTTP/1.1
+content-type: application/json
+
+{
+    "location": "Dominion Power",
+    "category": "Utilities",
+    "amount": 45.80,
+    "date": "11-05-2023"
+    
+}
+
+### CREATE 4
+POST http://localhost:3000/finances HTTP/1.1
+content-type: application/json
+
+{
+    "location": "Valley Lanes",
+    "category": "Entertainment",
+    "amount": 14.50,
+    "date": "10-30-2023"
+    
+}
+
+### CREATE 5
+POST http://localhost:3000/finances HTTP/1.1
+content-type: application/json
+
+{
+    "location": "Aldi",
+    "category": "Grocery",
+    "amount": 31.99,
+    "date": "08-19-2023"
+    
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/finances HTTP/1.1
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+### and update the year:
+GET http://localhost:3000/finances/656a85d4b8869ac89be662f3 HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the ID in the following request with one that exists
+### and update the year:
+PUT http://localhost:3000/finances/656a85d4b8869ac89be662f3 HTTP/1.1
+content-type: application/json
+
+{
+"location": "Food Lion",
+"category": "grocery",
+"amount": 20,
+"date": "06-21-2023"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/finances/656a8f1eb8869ac89be662f5 HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/finances HTTP/1.1
+
+
+
+
+

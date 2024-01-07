@@ -1,0 +1,450 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+/* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */
+/* @import "component1.css";   Component-specific stylesheets, if any.   */
+/* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round:wght@400&display=swap');
+
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+
+/*   ----- Variables  -----  */
+:root {
+    --darkSlateBlue: #45556C;
+    --slateBlue: #7B849595;
+    --blueGray: #B4B7BC;
+    --orangeMediumAlpha: #F9B16790;
+    --orangeMedium: #F9B167;
+    --lightBrownAlpha: #B48F7598;
+    --lightBrown: #B48F75;
+
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {
+    /* Can alternatively define in html {}. */
+    background-color: var(--darkSlateBlue);
+    background-image: url(images/background.JPG);
+    background-repeat: repeat;
+    background-size: auto;
+    color: var(--darkSlateBlue);
+    font-family: 'Fira Sans', sans-serif;
+    margin: 25px 50px 50px 25px;
+    padding: 10px;
+    max-width: 1200px;
+    min-width: 100px;
+    
+}
+
+/*  ----- Page layout blocks -----  */
+header {
+    background-color: var(--slateBlue);
+    color: var(--lightBrown);
+    border: 2px solid var(--orangeMedium);
+    margin: 25px 50px 10px 25px;
+    padding: 10px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+main {
+    background-color: var(--lightBrownAlpha);
+    border: 5px solid var(--darkSlateBlue);
+    border-radius: 5px 5px 5px 5px;
+
+    
+}
+
+section {
+    background-color: var(--lightBrown);
+    padding: 25px;
+    border-top: 5px solid var(--darkSlateBlue);
+
+}
+
+article {
+}
+
+#topic1 {}
+
+#topic2 {}
+
+div {}
+
+aside {}
+
+footer {
+    color: var(--blueGray);
+    background-color: var(--darkSlateBlue);
+    border: 2px solid var(--blueGray);
+    margin: 25px;
+    padding: 10px
+}
+
+/* ----- Anchors ----- Text links */
+a {}
+
+a:link {}
+
+a:hover {}
+
+a:active {}
+
+a:visited {}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 2px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+
+
+nav a {
+    color: var(--darkSlateBlue);
+    background-color: var(--blueGray);
+    border-radius: 5px 5px 5px 5px;
+    margin: 10px;
+    padding:10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--lightBrown);
+    background-color: var(--slateBlue);
+}
+
+nav.local {
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+nav.local a {
+    
+    
+    flex: auto;
+    color: var(--orangeMedium);
+    background-color: var(--darkSlateBlue);
+    border:var(--orangeMedium);
+
+}
+
+nav.local a:hover{
+    color: var(--lightBrown);
+    background-color: var(--blueGray)
+
+}
+
+/*  -----  Typography  ----- */
+p {}
+
+br {}
+
+ol,
+ul,
+dl {}
+
+li {}
+
+dt {}
+
+dd {}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {font-family: 'Varela Round', sans-serif;
+}
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+abbr {}
+
+acronym {}
+
+address {}
+
+blockquote {}
+
+q {}
+
+cite {}
+
+em {}
+
+hr {}
+
+mark {}
+
+s {}
+
+span {}
+
+strong {}
+
+sub {}
+
+sup {}
+
+time {}
+
+/*  ----- Coding or instructional typography ----- */
+pre {}
+
+code {}
+
+kbd {}
+
+samp {}
+
+var {}
+
+del {}
+
+ins {}
+
+/*  ----- Table ----- */
+table {
+    
+    width: 100%;
+    min-width: 20%;
+    
+    max-width: 95%;
+    border-collapse: collapse;
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+caption {}
+
+thead {
+    
+}
+
+tbody {
+    
+    max-width: 300px;
+    min-width: 150px;
+}
+
+tfoot {}
+
+tr {}
+
+tr:nth-child(even) {}
+
+th {
+    
+    
+    text-align: left;
+    padding: 5px;
+    background-color: var(--orangeMedium);
+    border: 2px solid var(--darkSlateBlue);
+}
+
+td {
+    
+    
+    text-align: left;
+    white-space:break-spaces;
+    padding: 5px;
+    background-color: var(--blueGray);
+    border: 2px solid var(--darkSlateBlue);
+}
+
+td:nth-child(1) {}
+
+colgroup {}
+
+data {}
+
+datalist {}
+
+.rightAlign {text-align:right;}
+
+
+/*  ----- Form ----- */
+form {display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+fieldset {
+    color:var(--darkSlateBlue);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+legend {
+    background-color: var(--orangeMedium);;
+    border: 5px solid var(--slateBlue);
+    margin: 5px;
+    padding:5px;
+}
+
+label {
+    margin: 5px;
+    padding: 5px;
+}
+
+button {
+    font-size: 110%;
+    width: 100px;
+    height: 50px;
+    color: var(--blueGray);
+    background-color: var(--darkSlateBlue);
+    border-radius: 5px;
+    
+}
+
+
+input {
+    color:var(--darkSlateBlue);
+    background-color: var(--blueGray);
+    
+    padding: 5px;
+    margin: 5px;
+}
+
+select {
+    color:var(--darkSlateBlue);
+    background-color: var(--blueGray);
+    padding: 5px;
+    margin: 5px;
+}
+
+optgroup {}
+
+option {}
+
+textarea {
+    background-color: var(--blueGray);
+    color:var(--lightBrown);
+    margin: 5px;
+    padding: 5px;
+    display:flex;
+    flex-direction: column;
+    height:100px;
+    width: 100% 350px;
+    resize: none;
+    color:var(--darkSlateBlue);
+
+}
+
+output {}
+
+meter {}
+
+progress {}
+
+
+/* ----- Media ----- */
+figure {
+}
+
+figcaption {}
+
+figure img {}
+
+svg {}
+
+picture {}
+
+source {}
+
+iframe {}
+
+video {}
+
+audio {}
+
+embed {}
+
+object {}
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.image-gallery-description { top:0px!important; 
+max-height: 10px; }
+.floatright {}
+
+.floatleft {}
+
+.center-middle {}
+
+.ten {}
+
+.twenty {}
+
+.thirty {}
+
+.forty {}
+
+.fifty {}
+
+.sixty {}
+
+.seventy {}
+
+.eighty {}
+
+.radius {}
+
+.circle {}
+
+.boxshadow {}
+
+.tshadow {}
+
+.gradient {}
+
+.shape {}
+
+
+i {font-size:160%;}
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
+
